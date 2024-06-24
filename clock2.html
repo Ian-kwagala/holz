@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Clock with Theme Switcher</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f0f0f0;
+		}
+		.clock-container {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-top: 50px;
+		}
+		.clock {
+			font-size: 48px;
+			margin-right: 20px;
+		}
+		.digital-clock {
+			font-size: 100px;
+			color: #666;
+		}
+		.theme-switcher {
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			background-color: #333;
+			color: #fff;
+			padding: 10px;
+			border-radius: 10px;
+			cursor: pointer;
+		}
+		.theme-switcher:hover {
+			background-color: #444;
+		}
+		.light-theme {
+			background-color: #f0f0f0;
+			color: #333;
+		}
+		.dark-theme {
+			background-color: #333;
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+	<div class="clock-container">
+		<div class="clock"></div>
+		<div class="digital-clock"></div>
+		<div class="theme-switcher" onclick="switchTheme()">Switch Theme</div>
+	</div>
+	
+	<script>
+		const clock = document.querySelector('.clock');
+		const digitalClock = document.querySelector('.digital-clock');
+		const themeSwitcher = document.querySelector('.theme-switcher');
+		
+		let theme = 'light';
+		
+		function switchTheme() {
+			if (theme === 'light') {
+				theme = 'dark';
+				document.body.classList.add('dark-theme');
+				document.body.classList.remove('light-theme');
+			} else {
+				theme = 'light';
+				document.body.classList.add('light-theme');
+				document.body.classList.remove('dark-theme');
+			}
+		}
+		
+		setInterval(() => {
+			const date = new Date();
+			const hours = date.getHours();
+			const minutes = date.getMinutes();
+			const seconds = date.getSeconds();
+			const time = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+			clock.innerHTML = time;
+			digitalClock.innerHTML = time;
+		}
+		, 1000);
+	</script>
+</body>
+</html>
+

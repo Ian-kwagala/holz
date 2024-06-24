@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>betPawa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .header {
+            background-color: #075b07;
+            color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .header .balance {
+            font-size: 16px;
+        }
+        .container {
+            display: flex;
+        }
+        .sidebar {
+            width: 100px;
+            height: 100%;
+            background-image:url(./Catholic\ wallpaper.jpg);
+            border-right: 1px solid #ddd;
+            padding: 20px;
+            border-radius:30px;
+            font-size:15px;
+        }
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            padding: 10px 0;
+        }
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+        .content {
+            flex-grow: 1;
+            padding: 20px;
+        }
+        .search-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .search-bar input {
+            width: 70%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        .search-bar button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            /*color: white;*/
+            border: none;
+            border-radius: 5px;
+        }
+        .deposit-section {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .deposit-section input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        .deposit-section button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .match-section {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .match-section h3 {
+            margin-top: 0;
+        }
+        .match-section table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .match-section table, .match-section th, .match-section td {
+            border: 1px solid #ddd;
+        }
+        .match-section th, .match-section td {
+            padding: 10px;
+            text-align: center;
+        }
+        .body{
+            background-image:url(./download\ \(13\).jpg);
+        }
+        .list{
+            font-size:17px;
+        }
+    </style>
+</head>
+<body class="body">
+    <div class="header">
+        <div class="logo">betPawa</div>
+        <div class="search-bar">
+            <button></button><input type="text" placeholder="Search for events">Search</button>
+        </div>
+        <div class="balance">UGX 0.00 <button>DEPOSIT</button> <button>MENU</button></div>
+    </div>
+    <div class="container">
+        <div class="sidebar">
+            <ul class="list">
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">LIVE NOW</a></li>
+                <li><a href="#">UPCOMING</a></li>
+                <li><a href="#">AVIATOR</a></li>
+                <li><a href="#">CASINO</a></li>
+                <li><a href="#">VIRTUALS</a></li>
+                <li><a href="#">PAWA6 FREE</a></li>
+                <li><a href="#">JACKPOT</a></li>
+                <li><a href="#">POPULAR</a></li>
+                <li><a href="#">TOURNAMENTS</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="deposit-section">
+                <label for="amount">Amount</label>
+                <input type="text" id="amount" placeholder="UGX Min: 500, Max: 7,000,000">
+                <p>Telco fees apply</p>
+                <button>DEPOSIT</button>
+                <p>What happens next? Confirm the deposit request on your phone to complete deposit process.</p>
+                <p>Note: Make sure any pop-up blocker is disabled</p>
+                <button>LOAD</button>
+                <p>Betslip is empty</p>
+                <div class="bet-info">
+                    <h3>pawaBoost</h3>
+                    <table>
+                        <tr>
+                            <th>Time</th>
+                            <th>Match</th>
+                            <th>1</th>
+                            <th>X</th>
+                            <th>2</th>
+                            <th>+104</th>
+                        </tr>
+                        <tr>
+                            <td>4:00 pm Thu 20/06</td>
+                            <td>Slovenia vs Serbia (n)</td>
+                            <td>5.25</td>
+                            <td>3.80</td>
+                            <td>1.80</td>
+                            <td>+104</td>
+                        </tr>
+                        <tr>
+                            <td>7:00 pm Thu 20/06</td>
+                            <td>Denmark vs England (n)</td>
+                            <td colspan="4">EURO CUP 21</td>
+                        </tr>
+                    </table>
+                    <button>LEARN HOW TO PLACE BET</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Themed Clock with Digital Display</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            transition: background-color 0.5s, color 0.5s;
+            background-image:url(./download.jpg);
+        }
+
+        #clock-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        #analog-clock {
+            width: 500px;
+            height: 500px;
+            border: 0px solid #f4f2f2;
+            border-radius: 50%;
+            position: relative;
+            background-image:url(./ghost.jpg);
+            background-position:center;
+            background-repeat:none;
+        }
+
+        .hand {
+            width: 50%;
+            height: 2px;
+            background-color: #f3ebeb;
+            position: absolute;
+            top: 50%;
+            transform-origin: 100%;
+            transform: rotate(90deg);
+        }
+
+        #hour-hand {
+            height: 4px;
+            background-color: #f8f5f5;
+        }
+
+        #digital-clock {
+            margin-top: 20px;
+            font-size:100px;
+            font-size: 2em;
+        }
+
+        #theme-toggle {
+            margin-top: 20px;
+            padding: 10px 20px;
+            cursor: pointer;
+            border: none;
+            background-color: #333;
+            color: #fff;
+            font-size: 1em;
+            transition: background-color 0.5s, color 0.5s;
+        }
+
+        .light-theme {
+            background-color: #fff;
+            color: #000;
+        }
+
+        .light-theme #analog-clock {
+            border-color: #000;
+        }
+
+        .light-theme .hand {
+            background-color: #000;
+        }
+
+        .light-theme #theme-toggle {
+            background-color: #000;
+            color: #fff;
+        }
+
+
+        /*digital clock*/
+        .clock-container {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-top: 50px;
+		}
+		.clock {
+			font-size: 48px;
+			margin-right: 20px;
+		}
+		.digital-clock {
+			font-size: 100px;
+			color: #0fff27;
+		}
+
+
+    </style>
+</head>
+<body>
+    <div id="clock-container">
+        <div id="analog-clock">
+            <div id="hour-hand" class="hand"></div>
+            <div id="minute-hand" class="hand"></div>
+            <div id="second-hand" class="hand"></div>
+        </div>
+        <div id="digital-clock"></div>
+        <button id="theme-toggle">Toggle Theme</button>
+    </div>
+
+    <!--digital clock-->
+    <div class="clock-container">
+		<div class="clock"></div>
+		<div class="digital-clock"></div>
+		<!--div class="theme-switcher" onclick="switchTheme()">Switch Theme</div-->
+	</div>
+
+    <script>
+
+        //change theme javascrirpt
+        const clock = document.querySelector('.clock');
+		const digitalClock = document.querySelector('.digital-clock');
+		const themeSwitcher = document.querySelector('.theme-switcher');
+		
+		let theme = 'light';
+		
+		function switchTheme() {
+			if (theme === 'light') {
+				theme = 'dark';
+				document.body.classList.add('dark-theme');
+				document.body.classList.remove('light-theme');
+			} else {
+				theme = 'light';
+				document.body.classList.add('light-theme');
+				document.body.classList.remove('dark-theme');
+			}
+		}
+
+
+        
+        const hourHand = document.getElementById('hour-hand');
+        const minuteHand = document.getElementById('minute-hand');
+        const secondHand = document.getElementById('second-hand');
+       // const digitalClock = document.getElementById('digital-clock');
+        const themeToggle = document.getElementById('theme-toggle');
+        let lightTheme = false;
+
+        //update the time dispalted with the current time on the computer
+        function updateClock() {
+            const now = new Date();
+            const seconds = now.getSeconds();
+            const minutes = now.getMinutes();
+            const hours = now.getHours();
+            
+            //calculate the degree of each hand of the anolaog clock display
+            const secondDegree = (seconds / 60) * 360;
+            const minuteDegree = (minutes / 60) * 360;
+            const hourDegree = (hours / 12) * 360;
+            
+            //update the analog clock hands
+            secondHand.style.transform = `rotate(${secondDegree + 90}deg)`;
+            minuteHand.style.transform = `rotate(${minuteDegree + 90}deg)`;
+            hourHand.style.transform = `rotate(${hourDegree + 90}deg)`;
+            
+            //update the digital clock display
+            digitalClock.textContent = now.toLocaleTimeString();
+        }
+
+        //change the theme btw dark and light
+        function toggleTheme() {
+            lightTheme = !lightTheme;
+            document.body.classList.toggle('light-theme', lightTheme);
+        }
+
+        themeToggle.addEventListener('click', toggleTheme);
+
+        setInterval(updateClock, 1000);
+        updateClock();  // Initial call to set the clock immediately
+    </script>
+</body>
+</html>

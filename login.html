@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300')
+            {
+                margin:0;
+                padding:0;
+                box-sizing:border-box;
+                font-family: 'Poppins',sans-serif;
+            }
+            body{
+                height:100vh;
+                display:flex;
+                justify-content:center;
+                align-items: center;
+                padding:10px;
+                background-color: linear-gradient(135deg, #71be67, #9b59b6);
+            }
+            .container{
+                max-width:700px;
+                width:100%;
+                background-color:#fff;
+                padding:25px 30px;
+                border-radius:10px;
+                box-shadow:0 5px 10px rgba(0,0,0,0.15);
+            }
+            .container .title{
+                font-size:30px;
+                font-weight:500;
+                position:relative;
+            }
+            .container .title:before{
+                content:"";
+                position:absolute;
+                left:0;
+                bottom:0;
+                height:3px;
+                width:30px;
+                border-radius:5px;
+                background:linear-gradient(135deg, )
+            }
+        </style>
+        <title>Responsive login form</title>
+    </head>
+    <body>
+        <div class="contanier">
+            <div class="title">Registration</div>
+            <div class="content">
+                <form action="#">
+                    <div class="user-details">
+                        <div class="input-box">
+                            <span class="details">Full Name</span>
+                            <input type="text" placeholder="Enter your name" required>
+                        </div>
+                        <div class="input-box">
+                           <span class="details">Username</span>
+                           <input type="text" placeholder="Enter your Username" required>
+                        </div>
+                        <div class="input-box">
+                           <span class="details">Email</span>
+                           <input type="text" placeholder="Enter your email" required>
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Phone number</span>
+                            <input type="text" placeholder="Enter your phonenumber" required>
+                        </div>
+                        <div class="input-box">
+                            <span class="details">Password</span>
+                            <input type="password" placeholder="Enter your password" required>
+                        </div>
+                        <div class="input-box">
+                            <span type="text">Confirm the password</span>
+                            <input type="password" placeholder="Confirm your passowrd" required>
+                        </div>
+                    </div>
+
+                <div class="gender-details">
+                    <input type="radio" name="gender" id="dot-1">
+                    <input type="radio" name="gender" id="dot-2">
+                    <input type="radio" name="gender" id="dot-3">
+                    <span class="gender-title">Gender</span>
+                    <div class="category">
+                        <label for="dot-1">
+                            <span class="dot-one"></span>
+                            <span class="gender">Male</span>
+                        </label>
+                        <label for="dot-1">
+                            <span class="dot-two"></span>
+                            <span class="gender">Female</span>
+                        </label>
+                        <label for="dot-1">
+                            <span class="dot-three"></span>
+                            <span class="gender">Prefer not to say</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="button">
+                    <input type="submit" value="Register">
+                </div>
+                </form>
+            </div>
+        </div>
+    </body>
+    <script>
+        
+    </script>
+</html>

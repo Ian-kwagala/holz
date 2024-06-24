@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mufasa Travels</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+        }
+        .section-title {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .vehicle {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+        .vehicle-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            margin: 10px;
+            padding: 15px;
+            width: 200px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .vehicle-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .vehicle-card button {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        /*side nav bar*/
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+        .container {
+            margin-left: 250px;
+            padding: 20px;
+        }
+        .sidebar {
+            height: 100%;
+            width: 250px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #333;
+            padding-top: 20px;
+        }
+        .sidebar a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            display: block;
+        }
+        .sidebar a:hover {
+            background-color: #575757;
+        }
+        .section-title {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .vehicle {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+        .vehicle-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            margin: 10px;
+            padding: 15px;
+            width: 200px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .vehicle-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .vehicle-card button {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mufasa Travels</h1>
+        <p>Your trusted partner in travel and transportation</p>
+    </header>
+    <div class="container">
+        <h2 class="section-title">Cars</h2>
+        <div class="vehicle" id="cars">
+            <!-- Car Cards -->
+        </div>
+
+        <h2 class="section-title">Bikes</h2>
+        <div class="vehicle" id="bikes">
+            <!-- Bike Cards -->
+        </div>
+
+        <h2 class="section-title">Trucks</h2>
+        <div class="vehicle" id="trucks">
+            <!-- Truck Cards -->
+        </div>
+
+        <h2 class="section-title">F1 Cars</h2>
+        <div class="vehicle" id="f1cars">
+            <!-- F1 Car Cards -->
+        </div>
+    </div>
+
+    <!--side nav bar-->
+
+    <div class="sidebar">
+        <a href="#cars">Cars</a>
+        <a href="#bikes">Bikes</a>
+        <a href="#trucks">Trucks</a>
+        <a href="#f1cars">F1 Cars</a>
+    </div>
+
+    <div class="container">
+        <h2 class="section-title" id="cars">Cars</h2>
+        <div class="vehicle">
+            <!-- Car Cards -->
+        </div>
+
+        <h2 class="section-title" id="bikes">Bikes</h2>
+        <div class="vehicle">
+            <!-- Bike Cards -->
+        </div>
+
+        <h2 class="section-title" id="trucks">Trucks</h2>
+        <div class="vehicle">
+            <!-- Truck Cards -->
+        </div>
+
+        <h2 class="section-title" id="f1cars">F1 Cars</h2>
+        <div class="vehicle">
+            <!-- F1 Car Cards -->
+        </div>
+    </div>
+
+    <script>
+        //side nav bar js
+        
+            const vehicles = {
+                cars: [
+                    { name: 'Sedan', image: 'https://via.placeholder.com/200', type: 'Car' },
+                    { name: 'SUV', image: 'https://via.placeholder.com/200', type: 'Car' }
+                ],
+                bikes: [
+                    { name: 'Sport Bike', image: 'https://via.placeholder.com/200', type: 'Bike' },
+                    { name: 'Cruiser', image: 'https://via.placeholder.com/200', type: 'Bike' }
+                ],
+                trucks: [
+                    { name: 'Pickup Truck', image: 'https://via.placeholder.com/200', type: 'Truck' },
+                    { name: 'Freight Truck', image: 'https://via.placeholder.com/200', type: 'Truck' }
+                ],
+                f1cars: [
+                    { name: 'F1 Red', image: 'https://via.placeholder.com/200', type: 'F1 Car' },
+                    { name: 'F1 Blue', image: 'https://via.placeholder.com/200', type: 'F1 Car' }
+                ]
+            };
+    
+            function createVehicleCard(vehicle) {
+                return `
+                    <div class="vehicle-card">
+                        <img src="${vehicle.image}" alt="${vehicle.name}">
+                        <h3>${vehicle.name}</h3>
+                        <button onclick="alert('Hired/Sold: ${vehicle.name}')">Hire/Sell</button>
+                    </div>
+                `;
+            }
+    
+            function displayVehicles() {
+                for (let type in vehicles) {
+                    const vehicleContainer = document.getElementById(type).nextElementSibling;
+                    vehicles[type].forEach(vehicle => {
+                        vehicleContainer.innerHTML += createVehicleCard(vehicle);
+                    });
+                }
+            }
+    
+            displayVehicles();
+        
+            //rest of js
+        const vehicles = {
+            cars: [
+                { name: 'Sedan', image: 'https://via.placeholder.com/200', type: 'Car' },
+                { name: 'SUV', image: 'https://via.placeholder.com/200', type: 'Car' }
+            ],
+            bikes: [
+                { name: 'Sport Bike', image: 'https://via.placeholder.com/200', type: 'Bike' },
+                { name: 'Cruiser', image: 'https://via.placeholder.com/200', type: 'Bike' }
+            ],
+            trucks: [
+                { name: 'Pickup Truck', image: 'https://via.placeholder.com/200', type: 'Truck' },
+                { name: 'Freight Truck', image: 'https://via.placeholder.com/200', type: 'Truck' }
+            ],
+            f1cars: [
+                { name: 'F1 Red', image: 'https://via.placeholder.com/200', type: 'F1 Car' },
+                { name: 'F1 Blue', image: 'https://via.placeholder.com/200', type: 'F1 Car' }
+            ]
+        };
+
+        function createVehicleCard(vehicle) {
+            return `
+                <div class="vehicle-card">
+                    <img src="${vehicle.image}" alt="${vehicle.name}">
+                    <h3>${vehicle.name}</h3>
+                    <button onclick="alert('Hired/Sold: ${vehicle.name}')">Hire/Sell</button>
+                </div>
+            `;
+        }
+
+        function displayVehicles() {
+            for (let type in vehicles) {
+                const vehicleContainer = document.getElementById(type);
+                vehicles[type].forEach(vehicle => {
+                    vehicleContainer.innerHTML += createVehicleCard(vehicle);
+                });
+            }
+        }
+
+        displayVehicles();
+    </script>
+</body>
+</html>
